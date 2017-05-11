@@ -95,12 +95,13 @@ h1 {
     left: 0.5em;
     width: 0.5em;
     }
-    #profile p{
-        padding-left: 30px;
-    }
-    #link {
-        text-align: center;
-    }
+#profile p{
+    padding-left: 30px;
+}
+
+#link {
+    text-align: center;
+}
 #link ul {
     position: relative;
     padding: 0px;
