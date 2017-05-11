@@ -2,10 +2,18 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width,inital-scale=1.0,minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0">
     <title>プロフィールデモページ</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="css.css">
+    <script type="text/javascript">
+        window.onload = function(){
+            if(window.innerWidth < 800){
+                document.getElementById("dock").style.width = window.innerWidth+"px";
+                console.log("width changed.");
+            }
+        };
+    </script>
 </head>
 <body>
         <header>

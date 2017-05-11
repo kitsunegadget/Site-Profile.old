@@ -10,43 +10,26 @@ header{
     color: #333;
     background-color: #87CEFA;
     background-color: #FFB74C; /* */
-    /*border: dashed 2px;
-    line-height: 1em;*/
     padding-top: 0.2em;
     padding-bottom: 0.4em;
 }
 h1 {
     margin: 0;
 }
+
 .content_1{
     background-color: #fff;
-    height: 100%;
 }
 #dock{
-    position: relative;
     margin:auto;
     padding-top: 30px;
     padding-bottom: 10px; 
     width: 800px;
 }
+
 #pficon{
     text-align: center;
 }
-/*
-#pficon:hover img{
-    -webkit-animation: spin .6s ease-in-out;
-    animation: spin .6s ease-in-out;
-}
-@-webkit-keyframes spin {
-    100% { -webkit-transform: rotateZ(-360deg);}
-}
-
-@keyframes spin {
-    100% { transform: rotate(-360deg);}
-    100% {transform: rotate(-360deg);}
-}
-*/
-    
 #pficon span::before {
     position: absolute;
     content:"";
@@ -64,8 +47,7 @@ h1 {
 }
 #pficon span{
     position: relative;
-    top: 0px;
-    left: 0px;
+
 }
 #pficon img{
     position: relative;
@@ -73,10 +55,10 @@ h1 {
 }
 
 #profile {
-    display: block;
     margin: auto;
 }
 #profile h2 {
+    position: relative;
     padding: 2px 0px 4px 30px;
     line-height: 1em;
     /*background-color: #6cf;*/
@@ -84,7 +66,6 @@ h1 {
     border-radius: 10px;
     /*box-shadow: 3px 3px #666;*/
     /*border: solid 1px #333;*/
-    position: relative;
 }
 #profile h2::before{
     content: '🔼';
@@ -103,9 +84,7 @@ h1 {
     text-align: center;
 }
 #link ul {
-    position: relative;
     padding: 0px;
-    border-radius: 10px;
     height: 100px;
 }
 #link li {
@@ -132,16 +111,21 @@ h1 {
 }
 #link img{
     position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
 }
 #twitter{
-    left: 0.5em;
-    right: auto;
+    left: 0;
+    right: 0;
     top: 0.5em;
     bottom: auto;
 }
 #github{
-    left: 1.1em;
-    right: auto;
+    left: 0;
+    right: 0;
     top: 1em;
     bottom: auto;
 }
