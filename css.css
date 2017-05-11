@@ -1,0 +1,154 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+        
+header{
+    text-align: center;
+    color: #333;
+    background-color: #87CEFA;
+    background-color: #FFB74C; /* */
+    /*border: dashed 2px;
+    line-height: 1em;*/
+    padding-top: 0.2em;
+    padding-bottom: 0.4em;
+}
+h1 {
+    margin: 0;
+}
+.content_1{
+    background-color: #fff;
+    height: 100%;
+}
+#dock{
+    position: relative;
+    margin:auto;
+    padding-top: 30px;
+    padding-bottom: 10px; 
+    width: 800px;
+}
+#pficon{
+    text-align: center;
+}
+/*
+#pficon:hover img{
+    -webkit-animation: spin .6s ease-in-out;
+    animation: spin .6s ease-in-out;
+}
+@-webkit-keyframes spin {
+    100% { -webkit-transform: rotateZ(-360deg);}
+}
+
+@keyframes spin {
+    100% { transform: rotate(-360deg);}
+    100% {transform: rotate(-360deg);}
+}
+*/
+    
+#pficon span::before {
+    position: absolute;
+    content:"";
+    width: 158px;
+    height: 158px;
+    left: -10px;
+    bottom: -6px;
+    z-index: 0;
+    border: dashed #eee 11px;
+    border-radius: 100px;
+    animation: gear 10s linear infinite;
+}
+@keyframes gear {
+    100% { transform: rotate(360deg);}
+}
+#pficon span{
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+#pficon img{
+    position: relative;
+    border-radius: 100px;
+}
+
+#profile {
+    display: block;
+    margin: auto;
+}
+#profile h2 {
+    padding: 2px 0px 4px 30px;
+    line-height: 1em;
+    /*background-color: #6cf;*/
+    color: #222;
+    border-radius: 10px;
+    /*box-shadow: 3px 3px #666;*/
+    /*border: solid 1px #333;*/
+    position: relative;
+}
+#profile h2::before{
+    content: '🔼';
+    position: absolute;
+    color: #009933;
+    transform: rotate(90deg);
+    top: 0;
+    left: 0.5em;
+    width: 0.5em;
+    }
+    #profile p{
+        padding-left: 30px;
+    }
+    #link {
+        text-align: center;
+    }
+#link ul {
+    position: relative;
+    padding: 0px;
+    border-radius: 10px;
+    height: 100px;
+}
+#link li {
+    padding: 0px;
+    margin: 0px;
+    display: inline-block;
+    list-style: none;
+    text-decoration: none;
+}
+#link span {
+    position: relative;
+    display: block;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    transition: 0.3s;
+    transition-timing-function: inherit;
+}
+#link span:hover{
+    background-color: #f6f6f6;
+    border-radius: 50px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px  #333;
+}
+#link img{
+    position: absolute;
+}
+#twitter{
+    left: 0.5em;
+    right: auto;
+    top: 0.5em;
+    bottom: auto;
+}
+#github{
+    left: 1.1em;
+    right: auto;
+    top: 1em;
+    bottom: auto;
+}
+
+footer{
+    display: block;
+    position: absolute;
+    color: #fff;
+    right: 0px;
+    padding: 5px 10px 5px 10px;
+}
