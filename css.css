@@ -61,11 +61,14 @@ h1 {
     position: relative;
     padding: 2px 0px 4px 30px;
     line-height: 1em;
-    /*background-color: #6cf;*/
-    color: #222;
-    border-radius: 10px;
-    /*box-shadow: 3px 3px #666;*/
-    /*border: solid 1px #333;*/
+    color: #333;
+    border-radius: 8px;
+    box-shadow: -2px 2px #666;
+    /*border-bottom: dashed 2px #333;*/
+    /*border-right: dashed 2px #333;*/
+    box-sizing: border-box;
+    /*background-color: rgba(255,183,76,0.4);*/
+    margin-bottom: 0em;
 }
 #profile h2::before{
     content: '🔼';
@@ -75,9 +78,25 @@ h1 {
     top: 0;
     left: 0.5em;
     width: 0.5em;
-    }
-#profile p{
-    padding-left: 30px;
+}
+#profile div{
+    margin-top: -0.5em; 
+    margin-bottom: -1.5em;
+    display: inline-flex;
+    vertical-align: top;
+    width: 100%;
+}
+#profile h4{
+    margin-top: 1em;
+    padding-left: 3em;
+}
+#profile div p{
+    padding-left: 1em;
+}
+#profile > p{
+    padding-left: 3em;
+    margin-top: 0.5em;
+    margin-bottom: 2em;
 }
 
 #link {
