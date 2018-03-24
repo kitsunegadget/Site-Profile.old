@@ -8,12 +8,17 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="css.css">
     <script type="text/javascript">
-        window.onload = function () {
+        window.onload = function() {
             if (window.innerWidth < 700) {
                 document.getElementById("dock").style.width = window.innerWidth + "px";
             }
             if (window.innerWidth < 500) {
-                document.getElementById("dock").style.width = "500px";
+                var ic = document.querySelector(".innerContents");
+                ic.style.flexDirection = "column"
+                var bd = document.getElementsByClassName("blockdetail");
+                for (let i=0; i<4; i++){
+                    bd[i].style.width = "100%";
+                }
             }
                 console.log("width changed.");
         };
@@ -86,8 +91,7 @@
     </div>
 
     <footer>
-        <small>Copyright &copy YuY. Kitsune Gadget
-            <small>
+        <small>Copyright &copy; YuY. Kitsune Gadget</small>
     </footer>
 </body>
 
