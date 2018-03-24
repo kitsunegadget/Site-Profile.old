@@ -1,92 +1,94 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,minimum-scale=1.0">
     <title>プロフィールデモページ</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="css.css">
     <script type="text/javascript">
-        window.onload = function(){
-            if(window.innerWidth < 800){
-                document.getElementById("dock").style.width = window.innerWidth+"px";
-                console.log("width changed.");
+        window.onload = function () {
+            if (window.innerWidth < 700) {
+                document.getElementById("dock").style.width = window.innerWidth + "px";
             }
+            if (window.innerWidth < 500) {
+                document.getElementById("dock").style.width = "500px";
+            }
+                console.log("width changed.");
         };
     </script>
 </head>
-<body>
-        <header>
-            <h1>profile.net</h1>
-        </header>
-        <div class="content_1">
-            <div id="dock">
-                <div id="pficon">
-                        <span><img src="imgs/pficon.png" height="160" width="160" title="me"></span>
-                </div>
-                <div id="profile">
-                    <h2>Name</h2>
-                        <p>Yusuke.S</p>
 
-                    <h2>Likes</h2>
-                        <div>
-                        <h4>Game</h4><p>Portal 2, Metroid Series, Sonic Series, Touhou Project, Kirby Series, Divine Gate, SOUND VOLTEX, 探索、アクション、パズル.</p>
-                        </div>
-                        <div>
-                        <h4>Music</h4><p>Kisida Kyoudan, L'arc~en~Ciel, Crush40, ゲームミュージック全般.</p>
-                        </div>
-                    <p></p>
-                    <h2>PC</h2>
-                        <div>
-                        <h4>OS</h4><p>Windows 10 Pro 64bit</p>
-                        </div>
-                        <div>
-                        <h4>CPU</h4><p>Intel Core i5 (4Core 4Thread)</p>
-                        </div>
-                        <div>
-                        <h4>RAM</h4><p>8GB</p>
-                        </div>
-                        <div>
-                        <h4>GPU</h4><p>nVidia GeForce GT630</p>
-                        </div>
-                    <p></p>
-                    <h2>Skill</h2>
-                        <div>
-                        <h4>Main</h4><p>C#, Python</p>
-                        </div>
-                        <div>
-                        <h4>Sub</h4><p>html/css, javascript, C++, Java, C</p>
-                        </div>
-                        <div>
-                        <h4>資格</h4><p>基本情報技術者</p>
-                        </div>
-                    <p></p>
-                    <h2>Other</h2>
-                        <div>
-                        <h4>Instrument</h4><p>Squier Classic Vibe Jazz Bass '60s</p>
-                        </div>
-                        <div>
-                        <h4>Audio Interface</h4><p>LINE6 UX1</p>
-                        </div>
-                        <div>
-                        <h4>Effector</h4><p>ZOOM MS-60B, POD Farm 2</p>
-                        </div>
-                    <p></p>
-                    <h2>Activity</h2>
-                    <p>くぁｗせｄｒｆｔｇｙふじこｌｐ；＠：「」</p>
-                    <p></p>
-                    <h2>Link</h2>
+<body>
+    <header>
+        <h1>profile.net</h1>
+    </header>
+    <div class="content_1">
+        <div id="dock">
+            <div class="pf_wrap">
+                <div id="dummy">
                 </div>
-                <div id="link">
-                    <ul>
-                        <li><a href="https://twitter.com/kitsunegadget" target="_blank" title="Twitter"><span><img id="twitter" src="imgs/Twitter_Logo_Blue.png" width="84px" height="84px"/></span></a></li>
-                        <li><a href="https://github.com/yuzmoz" target="_blank" title="gitHub"><span><img id="github" src="imgs/GitHub-Mark-120px-plus.png" width="64px" height="64px"/></span></a></li>
-                    </ul>
+                <div id="pficon">
+                    <span>
+                        <img src="imgs/pficon.png" height="160" width="160" title="me">
+                    </span>
+                </div>
+                <div id="nameplate">
+                    <p>YuY (Y.Suzuki)</p>
+                </div>
+            </div>
+            <div class="innerContents">
+                <!--inline-block-->
+                <div id="twitter" class="blockdetail">
+                    <a href="https://twitter.com/kitsunegadget" target="_blank">
+                        <span>
+                            <img src="imgs/Twitter_Logo_Blue.png" width="96px" height="96px" />
+                        </span>
+                        <div id="tw_mask" class="mask">
+                            <p>Twitter</p>
+                        </div>
+                    </a>
+                </div>
+                <div id="github" class="blockdetail">
+                    <a href="https://github.com/yuzmoz" target="_blank">
+                        <span>
+                            <img src="imgs/GitHub-Mark-120px-plus.png" width="64px" height="64px" />
+                        </span>
+                        <div id="gh_mask" class="mask">
+                            <p>GitHub</p>
+                        </div>
+                    </a>
+                </div>
+                <div id="nico" class="blockdetail">
+                    <a href="http://www.nicovideo.jp/user/53050562" target="_blank">
+                        <span>
+                            <img src="imgs/nc58317.png" width="64px" height="64px" />
+                        </span>
+                        <div id="nico_mask1" class="mask">
+                            <p>nico</p>
+                        </div>
+                        <div id="nico_mask2" class="mask">
+                            <p>nico</p>
+                        </div>
+                    </a>
+                </div>
+                <div id="hatena" class="blockdetail">
+
+                </div>
+                <div id="unknown" class="blockdetail">
+
                 </div>
             </div>
         </div>
-        <footer>
-            <small>Copyright &copy kitsune fox<small>
-        </footer>
+        <div id="dummy2">
+        </div>
+    </div>
+
+    <footer>
+        <small>Copyright &copy YuY. Kitsune Gadget
+            <small>
+    </footer>
 </body>
+
 </html>
