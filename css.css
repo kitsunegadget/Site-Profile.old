@@ -16,6 +16,9 @@ header{
 h1 {
     margin: 0;
 }
+a {
+    text-decoration: none;
+}
 
 .content_1{
     background-color: #333;
@@ -223,10 +226,13 @@ h1 {
 @keyframes rot {
     100% { transform: rotateX(360deg);}
 }
-#social #nav p:hover{
+#social #nav a:visited{
+    color: #fff;
+}
+#social #nav a:hover{
     color: #0f0;
 }
-#social #nav p:hover::before{
+#social #nav a:hover::before{
     position: absolute;
     margin-left: -20px;
     content: "▷ ";
