@@ -8,88 +8,110 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="css.css">
     <script type="text/javascript">
-        window.onload = function() {
+        window.onload = function () {
             if (window.innerWidth < 700) {
                 document.getElementById("dock").style.width = window.innerWidth + "px";
             }
-            if (window.innerWidth < 500) {
-                var ic = document.querySelector(".innerContents");
-                ic.style.flexDirection = "column"
-                var bd = document.getElementsByClassName("blockdetail");
-                for (let i=0; i<4; i++){
-                    bd[i].style.width = "100%";
-                }
-            }
-                console.log("width changed.");
+            console.log("width changed.");
         };
     </script>
 </head>
 
 <body>
     <header>
-        <h1>profile.net</h1>
+        <h1>Kitsune Gadget</h1>
     </header>
     <div class="content_1">
         <div id="dock">
             <div class="pf_wrap">
                 <div id="dummy">
                 </div>
-                <div id="pficon">
+                <div id="pficon" class="icon_delay">
                     <span>
                         <img src="imgs/pficon.png" height="160" width="160" title="me">
                     </span>
                 </div>
-                <div id="nameplate">
+                <div id="line1" class="str_delay">
+                    <p>NAME</p>
+                    <hr />
+                </div>
+                <div id="line2" class="str_delay">
+                    <hr />
+                </div>
+                <div id="nameplate" class="str_delay">
                     <p>YuY (Y.Suzuki)</p>
                 </div>
-            </div>
-            <div class="innerContents">
-                <!--inline-block-->
-                <div id="twitter" class="blockdetail">
-                    <a href="https://twitter.com/kitsunegadget" target="_blank">
-                        <span>
-                            <img src="imgs/Twitter_Logo_Blue.png" width="96px" height="96px" />
-                        </span>
-                        <div id="tw_mask" class="mask">
-                            <p>Twitter</p>
-                        </div>
-                    </a>
+                <div id="line3" class="str_delay">
+                    <p>INTEREST</p>
+                    <hr />
                 </div>
-                <div id="github" class="blockdetail">
-                    <a href="https://github.com/yuzmoz" target="_blank">
-                        <span>
-                            <img src="imgs/GitHub-Mark-120px-plus.png" width="64px" height="64px" />
-                        </span>
-                        <div id="gh_mask" class="mask">
-                            <p>GitHub</p>
-                        </div>
-                    </a>
+                <div id="line4" class="str_delay">
+                    <hr />
                 </div>
-                <div id="nico" class="blockdetail">
-                    <a href="http://www.nicovideo.jp/user/53050562" target="_blank">
-                        <span>
-                            <img src="imgs/nc58317.png" width="64px" height="64px" />
-                        </span>
-                        <div id="nico_mask1" class="mask">
-                            <p>nico</p>
-                        </div>
-                        <div id="nico_mask2" class="mask">
-                            <p>nico</p>
-                        </div>
-                    </a>
-                </div>
-                <div id="hatena" class="blockdetail">
-
-                </div>
-                <div id="unknown" class="blockdetail">
-
+                <div id="interest" class="str_delay">
+                    <p>Video Game</p>
+                    <p>Music</p>
+                    <p>Programming</p>
+                    <p></p>
+                    <p></p>
                 </div>
             </div>
-        </div>
-        <div id="dummy2">
         </div>
     </div>
+    <div class="content_2">
+        <h1 class="section_title">Products</h1>
+        <div id="works">
+            <div class="content_2_dock">
+                <article>
+                    <h2>Page Tweeter</h2>
+                    <p>Twitterボタンが無いページでも簡単にリンク共有できるようにした Google Chrome 拡張機能。</p>
+                    <p>A Chrome Extention. You can share any web page that no Tweet button.</p>
+                </article>
+                <article>
+                    <h2>Quick Change Proxy</h2>
+                    <p>プロキシ接続をよりすばやくを目的にしたタスクトレイ常駐型のアプリケーション。</p>
+                    <p>This apprication purpose is Proxy change quickly .</p>
+                </article>
+                <article>
+                    <h2>Orig Image View Link</h2>
+                    <p>Tweetdeck でオリジナルサイズの画像にワンタップでリンク出来るようにした Google Chrome 拡張機能。</p>
+                    <p>A Chrome Extention. You can see Orig size image link on Tweetdeck</p>
+                </article>
+                <article id="end">
+                    <p>そのほかのProducts</p>
+                </article>
+            </div>
+        </div>
+        <h1 class="section_title">Social</h1>
+        <div id="social">
+            <div class="content_2_dock">
+                <ul>
+                    <li>
+                        <a href="https://twitter.com/kitsunegadget" target="_blank">
+                            <img src="imgs/Twitter_Social_Icon_Rounded_Square_White.png" height="64" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/yuymoz" target="_blank">
+                            <img src="imgs/GitHub-Mark-Light-120px-plus.png" height="64" />
+                        </a>
+                    </li>
+                </ul>
+                <nav id="nav">
+                    <p>niconico</p>
+                    <p>YouTube</p>
+                    <p>hatena</p>
+                    <p></p>
 
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="content_footer">
+        <ul>
+
+        </ul>
+    </div>
     <footer>
         <small>Copyright &copy; YuY. Kitsune Gadget</small>
     </footer>

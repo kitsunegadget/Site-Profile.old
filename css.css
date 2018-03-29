@@ -22,22 +22,40 @@ h1 {
 }
 #dock{
     margin:auto;
-    padding-top: 30px;
     padding-bottom: 10px; 
     width: 700px;
 }
 
 .pf_wrap{
     width: 100%;
+    height: 500px;
     position: relative;
-    display: inline-flex;
+    display: grid;
+    grid-template-rows: 1fr 50% 1fr; 
+    grid-template-columns: 1fr 50% 1fr;
+    animation: fadeIn 2s ease;
 }
-#dummy{
-    width: 30%;
+.pf_wrap p{
+    line-height: 1px;
+}
+.pf_wrap hr{
+    margin: -8px;
+}
+.icon_delay{
+    animation: fadeIn 1s ease;
+}
+.str_delay{
+    animation: fadeIn 3s ease-in;
 }
 #pficon{
+    grid-row: 2/3;
+    grid-column: 2/3;
+    position: relative;
+    width: 100%;
+    margin: auto;
     text-align: center;
-    width: 40%;
+    animation: moving ease 2s forwards;
+    transform: translateY(-200%);
 }
 #pficon span::before {
     position: absolute;
@@ -54,6 +72,9 @@ h1 {
 @keyframes gear {
     100% { transform: rotate(360deg);}
 }
+@keyframes moving{
+    100% { transform: translateY(0); }
+}
 #pficon span{
     position: relative;
     width: 80%;
@@ -62,180 +83,156 @@ h1 {
     position: relative;
     border-radius: 90px;
 }
-#nameplate{
-    color: #eee;
-    width: 30%;
+#line1{
     position: absolute;
-    bottom: 0;
-    right: 0;
+    grid-row: 2/3;
+    grid-column: 3/4;
+    color: #eee;
+    top: -30px;
+    width: 100px;
+}
+#line2{
+    position: absolute;
+    grid-row: 2/3;
+    grid-column: 3/4;
+    color: #eee;
+    left: -86px;
+    top: 25px;
+    width: 80px;
+    transform: rotate(135deg)
+}
+#nameplate{
+    grid-row: 2/3;
+    grid-column: 3/4;
+    color: #eee;
+    position: absolute;
+    left: 5px;
+}
+#line3{
+    position: absolute;
+    grid-row: 3/4;
+    grid-column: 1/2;
+    color: #eee;
+    top: -30px;
+    right: -50px;
+    width: 100px;
+}
+#line4{
+    position: absolute;
+    grid-row: 3/4;
+    grid-column: 1/2;
+    color: #eee;
+    right: -102px;
+    top: -19px;
+    width: 40px;
+    transform: rotate(-45deg)
+}
+#interest{
+    color: #eee;
+    grid-row: 3/4;
+    grid-column: 1/2;
+    position: absolute;
+    left: 130px;
+    top: 0;
 }
 
-/* innerContents */
-.innerContents{
-    position: relative;
-    width: 100%;
-    margin: auto;
-    text-align: center;
-    display: inline-flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-top: 50px;
-    padding: 0;
-}
-.blockdetail{
-    position: relative;
-    margin: 0px;
-    border: solid #333 10px;
-    box-sizing: border-box;
-    border-radius: 5px;
-    -webkit-transition:	all 0.4s ease;
-    transition: all 0.4s ease;
-}
-.blockdetail a{
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-.blockdetail img{
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    right: 0;
-    left: 0;
-    margin: auto;
-    -webkit-transition:	all 0.4s ease;
-    transition: all 0.4s ease;
-}
-.blockdetail:hover{
-    box-shadow: #ddd 0px 5px 10px inset;
-}
-.mask{
-    position: absolute;
-	top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    -webkit-transition:	all 0.4s ease;
-    transition: all 0.4s ease;
-    text-decoration: none;
-    line-height: 20px;
-    font-size: 45px;
-    font-weight: bolder;
-}
 @keyframes fadeIn{
     0% { opacity: 0; }
-    30% { opacity: 0; }
     100% { opacity: 1; }
 }
-/* twitter */
-#twitter{
-    height: 140px;
-    width: 70%;
-    background: #cfedff;
-    overflow: hidden;
-    animation: fadeIn 0.8s ease;
+
+/* underContent */
+.content_2{
+    background-color: #222;
 }
-#twitter img{
-    transform: translateX(0);
+.section_title{
+    position: relative;
+    background: #FFB74C;
+    height: 45px;
+    width: 200px;
+    padding: 10px 0;
+    text-align: center;
+    color: #fff;
+    margin: 0;
 }
-#twitter #tw_mask{
-    margin-right: -160%;
-    transform: translateX(0);
-    color: #1DA1F2;
+#works {
+    background-color: #ddd;
+    padding: 0.01em 0;
 }
-#twitter:hover #tw_mask{
-    transform: translateX(-27%);
+#works h2:hover::before{
+    position: absolute;
+    margin-left: -30px;
+    content: "▷ ";
+    animation: rot linear 1s infinite;
 }
-#twitter a:visited{
-    color: #1DA1F2;
+#works h2:hover{
+    color: #3f3933;
 }
-#twitter:hover img{
-    transform: translateX(-110%);
+#works #end{
+    text-align: right;
+    padding-right: 20px;
+    transition: ease 1s;
 }
-#twitter:hover{
-    background: #fff;
+#works #end p:hover{
+    color: #3f3933;
+}
+#works #end p:hover::before{
+    position: absolute;
+    content: ">";
+    margin-left: -15px;
+    animation: move1 ease 0.5s forwards;
+    transform: translateX(-10px);
+}
+#works #end p:hover::after{
+    position: absolute;
+    content: "<";
+    margin-left: 5px;
+    animation: move1 ease 0.5s forwards;
+    transform: translateX(10px);
+}
+@keyframes move1{
+    100% { transform: translateX(0);}
 }
 
-/* github */
-#github{
-    height: 140px;
-    width: 30%;
-    background: #999;
-    animation: fadeIn 1.6s ease;
-    overflow: hidden;
-}
-#github img{
-    transform: translateY(0);
-}
-#github #gh_mask{
-    transform: translateY(100%);
-    color: #24292E;
-    font-size: 35px;
-}
-#github:hover #gh_mask{
-    transform: translateY(40%);
-}
-#github a:visited{
-    color: #24292E;
-}
-#github:hover img{
-    transform: translateY(-30%);
-}
-#github:hover{
-    background: #fff;
+.content_2_dock{
+    margin: 0 15%;
 }
 
-/* niconico */
-#nico{
-    height: 260px;
-    width: 25%;
-    background: #ddd;
-    animation: fadeIn 2.4s ease;
-    overflow: hidden;
+.content_footer{
+    background-color: #333;
 }
-#nico img{
-    transform: translateY(0);
+#social{
+    color: #fff;
+    background-color: #333;
+    padding-bottom: 5px;
 }
-#nico #nico_mask1{
-    transform: translate(100%, 35%);
-    color: #272727;
+#social ul{
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
-#nico #nico_mask2{
-    transform: translate(-100%, 50%);
-    color: #272727;
+#social li{
+    list-style: none;
+    margin: 10px 15px;
+    transition: ease 0.1s;
 }
-#nico:hover #nico_mask1{
-    transform: translate(0, 33%);
+#social li:hover{
+    transform: translate(-5%, -5%)
 }
-#nico:hover #nico_mask2{
-    transform: translate(0, 50%);
+@keyframes rot {
+    100% { transform: rotateX(360deg);}
 }
-#nico a:visited{
-    color: #272727;
+#social #nav p:hover{
+    color: #0f0;
 }
-#nico:hover img{
-    transform: translateY(-70%);
-}
-#nico:hover{
-    background: #fff;
-}
-
-#hatena{
-    height: 260px;
-    width: 25%;
-    background: #4D8;
-    animation: fadeIn 3.2s ease;
-}
-#unknown{
-    height: 260px;
-    width: 50%;
-    background: #aaa;
-    animation: fadeIn 4.0s ease;
+#social #nav p:hover::before{
+    position: absolute;
+    margin-left: -20px;
+    content: "▷ ";
+    animation: rot linear 1s infinite;
 }
 
-#dummy2{
-    height: 50px;
-}
 footer{
     display: block;
     position: absolute;
