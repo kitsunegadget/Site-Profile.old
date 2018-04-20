@@ -158,9 +158,13 @@ a {
     color: #fff;
     margin: 0;
 }
+#product{
+    display: none;
+}
 #works {
     background-color: #ddd;
     padding: 0.01em 0;
+    display: none;
 }
 #works h2:hover::before{
     position: absolute;
