@@ -208,6 +208,14 @@ a {
 .content_footer{
     background-color: #333;
 }
+
+#about{
+    color: #fff;
+    background-color: #333;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
 #social{
     color: #fff;
     background-color: #333;
