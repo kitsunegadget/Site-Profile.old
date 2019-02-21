@@ -7,6 +7,7 @@
     <title>Kitsune Gadget</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="css.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script type="text/javascript">
         window.onload = () => {
             if (window.innerWidth < 700) {
@@ -18,127 +19,109 @@
 </head>
 
 <body>
-    <header>
-        <h1>Kitsune Gadget</h1>
-    </header>
-    <div class="content_1">
-        <div id="dock">
-            <div class="pf_wrap">
-                <div id="dummy">
-                </div>
-                <div id="pficon" class="icon_delay">
-                    <span>
-                        <img src="imgs/pficon.png" height="160" width="160" title="me">
-                    </span>
-                </div>
-                <div id="line1" class="str_delay">
-                    <p>NAME</p>
-                    <hr />
-                </div>
-                <div id="line2" class="str_delay">
-                    <hr />
-                </div>
-                <div id="nameplate" class="str_delay">
-                    <p>Yu--+ (Yu.Szk)</p>
-                </div>
-                <div id="line3" class="str_delay">
-                    <p>INTEREST</p>
-                    <hr />
-                </div>
-                <div id="line4" class="str_delay">
-                    <hr />
-                </div>
-                <div id="interest" class="str_delay">
-                    <p>Video Game</p>
-                    <p>Music</p>
-                    <p>Programming</p>
-                    <p></p>
-                    <p></p>
+    <div id="root">
+        <header>
+            <h1>Kitsune Gadget</h1>
+        </header>
+        <div class="content_1">
+            <div id="dock">
+                <div class="pf_wrap">
+                    <div id="dummy">
+                    </div>
+                    <div id="pficon" class="icon_delay">
+                        <span>
+                            <img src="imgs/pficon.png" height="160" width="160" title="me">
+                        </span>
+                    </div>
+                    <div id="line1" class="str_delay">
+                        <p>NAME</p>
+                        <hr />
+                    </div>
+                    <div id="line2" class="str_delay">
+                        <hr />
+                    </div>
+                    <div id="nameplate" class="str_delay">
+                        <p>Yu--+ (Yu.Szk)</p>
+                    </div>
+                    <div id="line3" class="str_delay">
+                        <p>INTEREST</p>
+                        <hr />
+                    </div>
+                    <div id="line4" class="str_delay">
+                        <hr />
+                    </div>
+                    <div id="interest" class="str_delay">
+                        <p>Video Game</p>
+                        <p>Music</p>
+                        <p>Programming</p>
+                        <p></p>
+                        <p></p>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="content_2">
+            <h1 class="section_title">About</h1>
+            <div id="about">
+                <div class="content_2_dock">
+                    <p>{{ aboutText }}</p>
+                </div>
+            </div>
+
+            <h1 class="section_title" id="product">Products</h1>
+            <div id="works">
+                <div class="content_2_dock">
+                    <div v-for="product in products" :key="product.id">
+                        <h2>{{ product.title }}</h2>
+                        <article>
+                            <p>{{ product.text }}</p>
+                            <p>{{ product.text_alt }}</p>
+                        </article>
+                    </div>
+                    <article id="end">
+                        <p>そのほかのProducts</p>
+                    </article>
+                </div>
+            </div>
+
+            <h1 class="section_title">Social</h1>
+            <div id="social">
+                <div class="content_2_dock">
+                    <ul>
+                        <li v-for="social in socials" :key="social.id">
+                            <a :href="social.url" target="_blank">
+                                <img :src="social.img" height="64" width="64">
+                            </a>
+                        </li>
+                    </ul>
+                    <nav id="nav">
+                        <p>
+                            <a href="http://www.nicovideo.jp/user/53050562" target="_blank"></a>
+                        </p>
+                        <p>
+                            <a></a>
+                        </p>
+                        <p>
+                            <a href="https://kitsune-gadget.hatenablog.com" target="_blank"></a>
+                        </p>
+                        <p>
+                            <a></a>
+                        </p>
+
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="content_footer">
+            <ul>
+
+            </ul>
+        </div>
+        <footer>
+            <small>Copyright &copy; Yu--+. Kitsune Gadget</small>
+        </footer>
     </div>
-    <div class="content_2">
-        <h1 class="section_title">About</h1>
-        <div id="about">
-            <div class="content_2_dock">
-                <p>
-                    Kitsune Gadget は旧名の Garakuta Gadget: 役に立つかわからない道具を生み出すものの、
-                    その中から面白いモノが生み出せることを期待して名付けられています。（きつねかわいい）
-                </p>
-            </div>
-        </div>
-
-        <h1 class="section_title" id="product">Products</h1>
-        <div id="works">
-            <div class="content_2_dock">
-                <article>
-                    <h2>Page Tweeter</h2>
-                    <p>Twitterボタンが無いページでも簡単にリンク共有できるようにした Google Chrome 拡張機能。</p>
-                    <p>A Chrome Extention. You can share any web page that no Tweet button.</p>
-                </article>
-                <article>
-                    <h2>Quick Change Proxy</h2>
-                    <p>プロキシ接続をよりすばやくを目的にしたタスクトレイ常駐型のアプリケーション。</p>
-                    <p>This apprication purpose is Proxy change quickly .</p>
-                </article>
-                <article>
-                    <h2>Orig Image View Link</h2>
-                    <p>Tweetdeck でオリジナルサイズの画像にワンタップでリンク出来るようにした Google Chrome 拡張機能。</p>
-                    <p>A Chrome Extention. You can see Orig size image link on Tweetdeck</p>
-                </article>
-                <article id="end">
-                    <p>そのほかのProducts</p>
-                </article>
-            </div>
-        </div>
-
-        <h1 class="section_title">Social</h1>
-        <div id="social">
-            <div class="content_2_dock">
-                <ul>
-                    <li>
-                        <a href="https://twitter.com/kitsunegadget" target="_blank">
-                            <img src="imgs/Twitter_Social_Icon_Rounded_Square_White.png" height="64" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/kitsunegadget" target="_blank">
-                            <img src="imgs/GitHub-Mark-Light-120px-plus.png" height="64" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://kitsune-gadget.hatenablog.com" target="_blank">
-                            <img src="imgs/hatenablog-logo-fff.svg" height="64" width="64" />
-                        </a>
-                    </li>
-                </ul>
-                <nav id="nav">
-                    <p>
-                        <a href="http://www.nicovideo.jp/user/53050562" target="_blank"></a>
-                    </p>
-                    <p>
-                        <a></a>
-                    </p>
-                    <p>
-                        <a href="https://kitsune-gadget.hatenablog.com" target="_blank"></a>
-                    </p>
-                    <p>
-                        <a></a>
-                    </p>
-
-                </nav>
-            </div>
-        </div>
-    </div>
-    <div class="content_footer">
-        <ul>
-
-        </ul>
-    </div>
-    <footer>
-        <small>Copyright &copy; Yu--+. Kitsune Gadget</small>
-    </footer>
+    <script src="main.js"></script>
 </body>
 
 </html>
