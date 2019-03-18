@@ -35,7 +35,7 @@ var root = new Vue({
             {
                 id: 0,
                 url: "https://twitter.com/kitsunegadget",
-                img: "imgs/Twitter_Social_Icon_Rounded_Square_White.png"
+                img: "imgs/Twitter_Social_Icon_Circle_White.svg"
             },
             {
                 id: 1,

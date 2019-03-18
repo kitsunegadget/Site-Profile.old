@@ -1,15 +1,27 @@
 body {
     margin: 0px;
     padding: 0px;
+    height: 100%;
     background-color: #222;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-        
+
+#bg {
+    background: url(bg2.png) no-repeat fixed;
+    background-size: cover;
+    background-position-x: right;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    height: 100%;
+    opacity: 0.5;
+    position: fixed;
+}
 header{
     text-align: center;
-    color: #333;
+    color: #FFB74C;
     background-color: #87CEFA;
-    background-color: #FFB74C; /* */
+    background-color: #333; /* */
     padding-top: 0.2em;
     padding-bottom: 0.4em;
 }
@@ -21,7 +33,7 @@ a {
 }
 
 .content_1{
-    background-color: #333;
+    /* background-color: #333; */
 }
 #dock{
     margin:auto;
@@ -68,7 +80,7 @@ a {
     left: -10px;
     bottom: -6px;
     z-index: 0;
-    border: dashed #eee 11px;
+    border: dashed #009B9F 11px;
     border-radius: 90px;
     animation: gear 10s linear infinite;
 }
@@ -147,7 +159,11 @@ a {
 
 /* underContent */
 .content_2{
-    background-color: #222;
+    display: block;
+    margin: auto;
+    /* background-color: rgba(86, 89, 105, 0.514); */
+    max-width: 600px;
+    margin-bottom: 50px;
 }
 .section_title{
     /* position: relative; */
@@ -218,9 +234,21 @@ a {
 }
 
 #social{
+    position: relative;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
     color: #fff;
-    background-color: #333;
+    background-color: #FFB74C;
+    border-radius: 10px;
+    box-shadow: #FFB74C 0px 0px 25px;
     padding-bottom: 5px;
+    height: 200px;
+}
+#social-title{
+    color: #eee;
+    text-align: center;
 }
 #social ul{
     display: inline-flex;
@@ -230,13 +258,36 @@ a {
     margin-left: -40px;
 }
 #social li{
+    position: relative;
     list-style: none;
     margin: 10px 15px;
-    transition: ease 0.1s;
+    transition: ease 0.2s;
+    z-index: 50;
 }
 #social li:hover{
-    transform: translate(-5%, -5%)
+    /* transform: translate(-5%, -5%); */
 }
+
+@keyframes scaleup {
+    0% { transform: scale(0.5, 0.1); opacity: 0;}
+    40% { transform: scale(1.0, 0.7); opacity: 0.1;}
+    60% { transform: scale(1.7, 1.3); opacity: 1.0;}
+    80% { transform: scale(1.5, 1.1);}
+    100% { transform: scale(1.4, 1.4);}
+}
+#social li > a:hover::before{
+    position: absolute;
+    content: "";
+    background: #333; 
+    /* border: 2px dotted #222; */
+    box-sizing: border-box;
+    z-index: -1;
+    width: 100%;
+    height: 95%;
+    border-radius: 5px;
+    animation: scaleup linear 0.12s forwards;
+}
+
 @keyframes rot {
     100% { transform: rotateX(360deg);}
 }
@@ -254,10 +305,10 @@ a {
 }
 
 footer{
-    display: block;
-    /* position: absolute; */
-    text-align: right;
+    /* background: #333; */
+    bottom: 0;
+    text-align: center;
+    width: calc(100% - 20px);
     color: #fff;
-    right: 0px;
     padding: 5px 10px 5px 10px;
 }
