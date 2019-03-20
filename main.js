@@ -46,6 +46,11 @@ var root = new Vue({
                 id: 2,
                 url: "https://kitsune-gadget.hatenablog.com",
                 img: "imgs/hatenablog-logo-fff.svg"
+            },
+            {
+                id: 3,
+                url: "https://soundcloud.com/kitsunegadget",
+                img: "imgs/white_transparent_64.png"
             }
         ]
     }
