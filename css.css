@@ -244,7 +244,7 @@ a {
     border-radius: 10px;
     box-shadow: #FFB74C 0px 0px 25px;
     padding-bottom: 5px;
-    height: 200px;
+    /* height: 200px; */
 }
 #social-title{
     color: #eee;
@@ -252,10 +252,10 @@ a {
 }
 #social ul{
     display: inline-flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     justify-content: center;
     align-items: center;
-    margin-left: -40px;
+    padding: 0;
 }
 #social li{
     position: relative;
